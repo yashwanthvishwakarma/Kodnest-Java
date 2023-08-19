@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Experiment {
+	
+	public static double celsiusToFahrenheit(double temperature) {
+		return (temperature * 9/5) + 32;
+	}
+	
+	public static double fahrenheitToCelsius(double temperature) {
+		return (temperature - 32) * 5/9;
+	}
+	
+	public static void main(String[] args) {
+		
+		Scanner s = new Scanner(System.in);
+		System.out.println("Welcome to temperature conversion tool :) "+"\n"+"Select an option");
+		System.out.println("'1' to Convert celsius to fahrenheit"+"\n"+"'2' to Convert fahrenheit to celsius");
+		System.out.println("Enter your choice : ");
+		int option = s.nextInt();
+		/*switch(option) {
+		case 1 : System.out.println("Enter the temperature in celsius : ");
+		break;
+		case 2 : System.out.println("Enter the temperature in farhenheit : ");
+		break;
+		default : System.out.println("Invalid option x_x");
+		}*/
+		if(option == 1) {
+			System.out.println("Enter the temperature in celsius : ");
+			//double celsius = s.nextDouble();
+		} else if(option == 2) {
+			System.out.println("Enter the temperature in farhenheit : ");
+			//double farheneit = s.nextDouble()
+		} else {
+			System.out.println("Invalid option x_x");
+		}
+		double temperature = s.nextDouble();
+		if(option == 1) {
+			System.out.println(temperature+ "°C is equivalent to "+celsiusToFahrenheit(temperature)+"°F");
+		} else if(option == 2){
+			System.out.println(temperature+ "°F is equivalent to "+fahrenheitToCelsius(temperature)+"°C");
+		} else {
+			System.out.println("Invalid conversion x_x");
+		}
+
+	}
+
+}

@@ -1,0 +1,18 @@
+import java.util.*;
+public class Answer {
+	
+	public static double celsiusToFahrenheit(int celsius) {
+		return (celsius * 9/5) + 32;
+	}
+	
+	public static double fahrenheitToCelsius(int fahrenheit) {
+		return (fahrenheit - 32) × 5/9;
+	}
+
+	public static void main(String[] args) {
+		
+		Scanner s = new Scanner(System.in);
+		
+	}
+
+}

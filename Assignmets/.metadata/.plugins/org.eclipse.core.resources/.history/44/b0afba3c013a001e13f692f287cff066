@@ -1,0 +1,33 @@
+import java.util.*;
+public class Answer {
+	
+	public static double calculate(double a, double b, char c) {
+		if(c == '+') {
+			return a+b;
+		} else {
+			return a*b;
+		}
+	}
+	 
+	public static double calculate(double a, double b, String c) {
+		if(c == "-") {
+			return a-b;
+		} else {
+			return a/b;
+		}
+	}
+	public static void main(String[] args) {
+		
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the First number");
+		float first = s.nextFloat();
+		System.out.println("Enter the Secound number");
+		float secound = s.nextFloat();
+		System.out.println("Enter the operator (+,-,*,/)");
+		char operator = s.next().charAt(0);
+		
+		System.out.println("Result : "+calculate(first,secound,operator));
+		
+	}
+
+}

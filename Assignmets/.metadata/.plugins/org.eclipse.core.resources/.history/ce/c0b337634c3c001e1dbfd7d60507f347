@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class Answer2 {
+	
+	public static double calculator(int a, int b, char c) {
+		return a+b;
+	}
+	
+	public static double calculator(double a, char c, double b) {
+		return a-b;
+	}
+	
+	public static double calculator(char c, double a, double b) {
+		return a*b;
+	}
+	
+	public static double calculator(char c, float b, double a) {
+		return a/b;
+	}
+
+	public static void main(String[] args) {
+		
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the First number : ");
+		float first = s.nextFloat();
+		System.out.println("Enter the Secound number : ");
+		float secound = s.nextFloat();
+		System.out.println("Enter the operator (+,-,*,/) : ");
+		char operator = s.next().charAt(0);
+				
+		if(operator == '+') {
+			System.out.println("result : "+calculator(first,secound,operator));
+		} else if(operator == '-') {
+			System.out.println("Result : "+calculator(first,operator,secound));
+		} else if(operator == '*') {
+			System.out.println("Result : "+calculator(operator,first,secound));
+		} else if(operator == '/') {
+			System.out.println("Result : "+calculator(operator,secound,first));
+		} else {
+			System.out.println("Invalid Operator");
+		}
+
+	}
+
+}
