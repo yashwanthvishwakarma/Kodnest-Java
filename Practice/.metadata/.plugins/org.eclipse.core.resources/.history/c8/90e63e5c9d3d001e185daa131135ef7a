@@ -1,0 +1,20 @@
+import java.util.*;
+public class Class {
+	
+	public static void checkDiscount(double purchaseAmount) {
+		if(purchaseAmount >= 100) {
+			System.out.println("Discount Applicable");
+		} else {
+			System.out.println("No Discount Applicable");
+		}
+	}
+
+	public static void main(String[] args) {
+		
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the Amount : ");
+		double purchaseAmount = s.nextDouble();
+		checkDiscount(purchaseAmount);
+	}
+
+}
